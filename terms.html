@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wolf Stone Production - Kullanım Şartları" data-i18n="legal.terms.title">
+    <title data-i18n-title="legal.terms.title">Kullanım Şartları - Wolf Stone Production</title>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background-color: #0B0B0B;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-section h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2DA8FF;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .content {
+            padding: 60px 20px;
+        }
+
+        .content h1 {
+            color: #2DA8FF;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .content .date {
+            color: #CCCCCC;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+
+        .content h2 {
+            color: #2DA8FF;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .content p {
+            color: #CCCCCC;
+            margin-bottom: 15px;
+        }
+
+        .content ul {
+            color: #CCCCCC;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .content a {
+            color: #2DA8FF;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0B0B0B;
+            border-top: 1px solid #1a1a1a;
+            padding: 30px 20px;
+            text-align: center;
+            color: #CCCCCC;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        footer .footer-links a {
+            color: #2DA8FF;
+            text-decoration: none;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-info {
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+        footer a {
+            color: #2DA8FF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                gap: 15px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo-section">
+                <img src="assets/logo.svg" alt="Wolf Stone Production Logo">
+                <h1 data-i18n="brand.name">Wolf Stone Production</h1>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">Hakkımızda</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Hizmetler</a></li>
+                    <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolyo</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">İletişim</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-toggle" onclick="document.querySelector('.language-selector').classList.toggle('open')">
+                        <span class="lang-icon">🌐</span>
+                        <span class="lang-code">EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option" data-lang="tr" onclick="I18n.setLanguage('tr'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.tr">Türkçe</button>
+                        <button class="lang-option" data-lang="en" onclick="I18n.setLanguage('en'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.en">English</button>
+                        <button class="lang-option" data-lang="ru" onclick="I18n.setLanguage('ru'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.ru">Русский</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="container">
+            <h1 data-i18n="legal.terms.title">Kullanım Şartları</h1>
+            <p class="date" data-i18n="legal.terms.lastUpdated">Son güncelleme: 11.01.2026</p>
+
+            <p data-i18n="legal.terms.intro">Wolf Stone Production web sitesini kullanarak, aşağıdaki kullanım şartlarını kabul etmiş sayılırsınız.</p>
+
+            <h2 data-i18n="legal.terms.service.title">1. Hizmet Tanımı</h2>
+            <p data-i18n="legal.terms.service.description">Wolf Stone Production, prodüksiyon, dijital hizmetler ve içerikler hakkında bilgi sunar. Web sitemiz bilgilendirme amaçlıdır.</p>
+
+            <h2 data-i18n="legal.terms.liability.title">2. Sorumluluk Sınırlaması</h2>
+            <p data-i18n="legal.terms.liability.description">Web sitemiz \"olduğu gibi\" sunulmaktadır. Kesintisizlik, hatasızlık veya güvenlik garantisi vermiyoruz. Hizmetlerimizin kullanımından kaynaklanan doğrudan, dolaylı, arızi veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamayız.</p>
+
+            <h2 data-i18n="legal.terms.advice.title">3. Profesyonel Tavsiye Değildir</h2>
+            <p data-i18n="legal.terms.advice.description">Site içerikleri hukuk, finans veya sağlık tavsiyesi değildir. Profesyonel tavsiye için ilgili uzmanlara danışın.</p>
+
+            <h2 data-i18n="legal.terms.thirdParty.title">4. Üçüncü Taraf Linkler</h2>
+            <p data-i18n="legal.terms.thirdParty.description">Web sitemizde üçüncü taraf linkler bulunabilir. Bu linklerin içeriği ve gizlilik uygulamaları üzerinde kontrolümüz yoktur.</p>
+
+            <h2 data-i18n="legal.terms.intellectual.title">5. Fikri Mülkiyet</h2>
+            <p data-i18n="legal.terms.intellectual.description">Logo, metinler, tasarım ve diğer içerikler Wolf Stone Production'a aittir. İzinsiz kopyalama, dağıtma veya kullanma yasaktır.</p>
+
+            <h2 data-i18n="legal.terms.userContent.title">6. Kullanıcı İçerikleri</h2>
+            <p data-i18n="legal.terms.userContent.description">İletişim formundan gönderilen içeriklerin yasal sorumluluğu kullanıcıya aittir. Spam, yasadışı veya zararlı içerik göndermek yasaktır.</p>
+
+            <h2 data-i18n="legal.terms.changes.title">7. Değişiklikler</h2>
+            <p data-i18n="legal.terms.changes.description">Hizmet koşulları zaman zaman değiştirilebilir. Değişiklikler bu sayfada yayınlanacaktır.</p>
+
+            <h2 data-i18n="legal.terms.law.title">8. Uygulanacak Hukuk</h2>
+            <p data-i18n="legal.terms.law.description">Bu şartlar Türkiye Cumhuriyeti yasalarına tabidir. Uyuşmazlıklar için Antalya/Muratpaşa mahkemeleri yetkilidir.</p>
+
+            <h2 data-i18n="legal.terms.disputes.title">9. Uyuşmazlıklar</h2>
+            <p data-i18n="legal.terms.disputes.description">Herhangi bir uyuşmazlık durumunda, yetkili mahkemeler Antalya/Muratpaşa'dır.</p>
+
+            <h2 data-i18n="legal.terms.contact.title">10. İletişim</h2>
+            <p data-i18n="legal.terms.contact.description">Kullanım şartları hakkında sorularınız için:</p>
+            <p><a href="mailto:wolfstoneproduction@gmail.com" data-i18n="legal.terms.contact.email">wolfstoneproduction@gmail.com</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                <a href="terms.html" data-i18n="footer.terms">Kullanım Şartları</a>
+                <a href="contact.html" data-i18n="nav.contact">İletişim</a>
+                <a href="mailto:wolfstoneproduction@gmail.com">wolfstoneproduction@gmail.com</a>
+            </div>
+            <div class="footer-info">
+                <p><span data-i18n="footer.copyright">© Wolf Stone Production</span></p>
+                <p><span data-i18n="footer.lastUpdated">Son güncelleme:</span> 11.01.2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        I18n.init().then(() => {
+            const langCode = I18n.currentLang.toUpperCase();
+            document.querySelector('.lang-code').textContent = langCode;
+        });
+        
+        const originalSetLanguage = I18n.setLanguage;
+        I18n.setLanguage = async function(lang) {
+            await originalSetLanguage.call(this, lang);
+            document.querySelector('.lang-code').textContent = lang.toUpperCase();
+        };
+        
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.language-selector')) {
+                document.querySelectorAll('.language-selector').forEach(el => el.classList.remove('open'));
+            }
+        });
+    </script>
+</body>
+</html>

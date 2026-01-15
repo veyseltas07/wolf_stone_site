@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wolf Stone Production - Hakkımızda" data-i18n="about.title">
+    <title data-i18n-title="about.title">Hakkımızda - Wolf Stone Production</title>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background-color: #0B0B0B;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-section h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2DA8FF;
+        }
+
+        .content {
+            padding: 60px 20px;
+        }
+
+        .content h1 {
+            color: #2DA8FF;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .mission {
+            background-color: #1a1a1a;
+            border-left: 4px solid #2DA8FF;
+            padding: 30px;
+            margin-bottom: 50px;
+            color: #CCCCCC;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .values {
+            margin-bottom: 50px;
+        }
+
+        .values h2 {
+            color: #2DA8FF;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .value-item {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        .value-item:hover {
+            border-color: #2DA8FF;
+        }
+
+        .value-item h3 {
+            color: #2DA8FF;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+
+        .value-item p {
+            color: #CCCCCC;
+            font-size: 1rem;
+        }
+
+        .founder {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .founder h2 {
+            color: #2DA8FF;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .founder p {
+            color: #CCCCCC;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #2DA8FF;
+            color: #FFFFFF;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #1a7acc;
+            transform: translateY(-2px);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer {
+            background-color: #0B0B0B;
+            border-top: 1px solid #1a1a1a;
+            padding: 30px 20px;
+            text-align: center;
+            color: #CCCCCC;
+        }
+
+        footer a {
+            color: #2DA8FF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content h2 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                gap: 15px;
+            }
+
+            .mission {
+                padding: 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo-section">
+                <img src="assets/logo.svg" alt="Wolf Stone Production Logo">
+                <h1 data-i18n="brand.name">Wolf Stone Production</h1>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">Hakkımızda</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Hizmetler</a></li>
+                    <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolyo</a></li>
+                    <li><a href="ezan-plus-privacy.html" data-i18n="nav.ezanPlus">Ezan Plus Politikalar</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">İletişim</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-toggle" onclick="document.querySelector('.language-selector').classList.toggle('open')">
+                        <span class="lang-icon">🌐</span>
+                        <span class="lang-code">EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option" data-lang="tr" onclick="I18n.setLanguage('tr'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.tr">Türkçe</button>
+                        <button class="lang-option" data-lang="en" onclick="I18n.setLanguage('en'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.en">English</button>
+                        <button class="lang-option" data-lang="ru" onclick="I18n.setLanguage('ru'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.ru">Русский</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="container">
+            <h1 data-i18n="about.title">Hakkımızda</h1>
+
+            <div class="mission">
+                <p data-i18n="about.mission">Wolf Stone Production olarak, müzik klibi prodüksiyonundan dijital içerik üretimine kadar geniş bir yelpazede hizmet sunuyoruz. Misyonumuz, her projede teslim odaklı çalışarak müşterilerimizin hedeflerine ulaşmalarını sağlamaktır. Proje hedefini netleştirip, zamanında ve kaliteli sonuçlar üretmeyi taahhüt ediyoruz.</p>
+            </div>
+
+            <div class="values">
+                <h2 data-i18n="about.values.title">Değerlerimiz</h2>
+
+                <div class="value-item">
+                    <h3 data-i18n="about.values.delivery.title">Teslim Odaklılık</h3>
+                    <p data-i18n="about.values.delivery.description">Her projede zamanında teslimi önceliklendiririz. Belirlenen tarihlerde, kaliteli işler sunmak için çalışırız.</p>
+                </div>
+
+                <div class="value-item">
+                    <h3 data-i18n="about.values.solutions.title">Çözüm Üretme</h3>
+                    <p data-i18n="about.values.solutions.description">Karşılaştığımız zorluklarda yaratıcı ve pratik çözümler üretiriz. Bütçe ve zaman kısıtları içinde en iyi sonucu hedefleriz.</p>
+                </div>
+
+                <div class="value-item">
+                    <h3 data-i18n="about.values.communication.title">Şeffaf İletişim</h3>
+                    <p data-i18n="about.values.communication.description">Proje sürecinde açık ve düzenli iletişim kurarız. Müşterilerimiz her aşamada bilgilendirilir ve geri bildirimler değerlendirilir.</p>
+                </div>
+            </div>
+
+            <div class="founder">
+                <h2 data-i18n="about.founder.title">Kurucu</h2>
+                <p data-i18n="about.founder.description">Wolf Stone Production, prodüksiyon ve dijital içerik alanında deneyimli bir ekip tarafından kurulmuştur. Müzik endüstrisinden dijital platformlara kadar geniş bir portföyde çalışma deneyimimiz bulunmaktadır. Her projede müşteri memnuniyetini ve kaliteyi ön planda tutarak, sektörde güvenilir bir ortak olmayı hedefliyoruz.</p>
+            </div>
+
+            <div class="cta-container">
+                <a href="contact.html" class="cta-button" data-i18n="cta.contact">İletişim</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+                <a href="privacy.html" data-i18n="footer.privacy" style="color: #2DA8FF; text-decoration: none;">Gizlilik Politikası</a>
+                <a href="terms.html" data-i18n="footer.terms" style="color: #2DA8FF; text-decoration: none;">Kullanım Şartları</a>
+                <a href="contact.html" data-i18n="nav.contact" style="color: #2DA8FF; text-decoration: none;">İletişim</a>
+                <a href="mailto:wolfstoneproduction@gmail.com" style="color: #2DA8FF; text-decoration: none;">wolfstoneproduction@gmail.com</a>
+            </div>
+            <div style="font-size: 0.9rem; margin-top: 15px;">
+                <p><span data-i18n="footer.copyright">© Wolf Stone Production</span></p>
+                <p><span data-i18n="footer.lastUpdated">Son güncelleme:</span> 11.01.2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        I18n.init().then(() => {
+            const langCode = I18n.currentLang.toUpperCase();
+            document.querySelector('.lang-code').textContent = langCode;
+        });
+        
+        const originalSetLanguage = I18n.setLanguage;
+        I18n.setLanguage = async function(lang) {
+            await originalSetLanguage.call(this, lang);
+            document.querySelector('.lang-code').textContent = lang.toUpperCase();
+        };
+        
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.language-selector')) {
+                document.querySelectorAll('.language-selector').forEach(el => el.classList.remove('open'));
+            }
+        });
+    </script>
+</body>
+</html>
+

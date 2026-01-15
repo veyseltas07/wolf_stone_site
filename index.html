@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wolf Stone Production - Prodüksiyon, Dijital Ürünler ve Uygulamalar" data-i18n="home.subtitle">
+    <title data-i18n-title="home.title">Wolf Stone Production</title>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #0B0B0B;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-section h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2DA8FF;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #CCCCCC;
+        }
+
+        /* Cards Section */
+        .cards {
+            padding: 60px 20px;
+        }
+
+        .cards .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 30px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #2DA8FF;
+        }
+
+        .card h2 {
+            color: #2DA8FF;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #CCCCCC;
+            margin-bottom: 20px;
+        }
+
+        .card-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-links a {
+            color: #2DA8FF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .card-links a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0B0B0B;
+            border-top: 1px solid #1a1a1a;
+            padding: 30px 20px;
+            text-align: center;
+            color: #CCCCCC;
+        }
+
+        footer a {
+            color: #2DA8FF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                gap: 15px;
+            }
+
+            .cards .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo-section">
+                <img src="assets/logo.svg" alt="Wolf Stone Production Logo">
+                <h1 data-i18n="brand.name">Wolf Stone Production</h1>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">Hakkımızda</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Hizmetler</a></li>
+                    <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolyo</a></li>
+                    <li><a href="ezan-plus-privacy.html" data-i18n="nav.ezanPlus">Ezan Plus Politikalar</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">İletişim</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-toggle" onclick="document.querySelector('.language-selector').classList.toggle('open')">
+                        <span class="lang-icon">🌐</span>
+                        <span class="lang-code">EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option" data-lang="tr" onclick="I18n.setLanguage('tr'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.tr">Türkçe</button>
+                        <button class="lang-option" data-lang="en" onclick="I18n.setLanguage('en'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.en">English</button>
+                        <button class="lang-option" data-lang="ru" onclick="I18n.setLanguage('ru'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.ru">Русский</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 data-i18n="home.title">Wolf Stone Production</h1>
+                <p data-i18n="home.subtitle">Prodüksiyon • Dijital Ürünler • Uygulamalar</p>
+            </div>
+        </section>
+
+        <section class="cards">
+            <div class="container">
+                <div class="card">
+                    <h2 data-i18n="home.apps.title">Uygulamalar</h2>
+                    <p data-i18n="home.apps.description">Mobil uygulamalarımız ve ilgili politikalar</p>
+                    <div class="card-links">
+                        <a href="ezan-plus-privacy.html" data-i18n="home.apps.privacy">Ezan Plus Gizlilik Politikası</a>
+                        <a href="ezan-plus-terms.html" data-i18n="home.apps.terms">Ezan Plus Kullanım Şartları</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 data-i18n="home.production.title">Prodüksiyon</h2>
+                    <p data-i18n="home.production.description">Yapılan işler ve portfolyo</p>
+                    <div class="card-links">
+                        <a href="portfolio.html" data-i18n="home.production.link">Portfolyo / Yapılan İşler</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 data-i18n="home.corporate.title">Kurumsal</h2>
+                    <p data-i18n="home.corporate.description">Genel gizlilik politikası ve kullanım şartları</p>
+                    <div class="card-links">
+                        <a href="privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                        <a href="terms.html" data-i18n="footer.terms">Kullanım Şartları</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+                <a href="privacy.html" data-i18n="footer.privacy" style="color: #2DA8FF; text-decoration: none;">Gizlilik Politikası</a>
+                <a href="terms.html" data-i18n="footer.terms" style="color: #2DA8FF; text-decoration: none;">Kullanım Şartları</a>
+                <a href="contact.html" data-i18n="nav.contact" style="color: #2DA8FF; text-decoration: none;">İletişim</a>
+                <a href="mailto:wolfstoneproduction@gmail.com" style="color: #2DA8FF; text-decoration: none;">wolfstoneproduction@gmail.com</a>
+            </div>
+            <div style="font-size: 0.9rem; margin-top: 15px;">
+                <p><span data-i18n="footer.copyright">© Wolf Stone Production</span></p>
+                <p><span data-i18n="footer.lastUpdated">Son güncelleme:</span> 11.01.2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        // Update language code display
+        I18n.init().then(() => {
+            const langCode = I18n.currentLang.toUpperCase();
+            document.querySelector('.lang-code').textContent = langCode;
+        });
+        
+        // Update lang code when language changes
+        const originalSetLanguage = I18n.setLanguage;
+        I18n.setLanguage = async function(lang) {
+            await originalSetLanguage.call(this, lang);
+            document.querySelector('.lang-code').textContent = lang.toUpperCase();
+        };
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.language-selector')) {
+                document.querySelectorAll('.language-selector').forEach(el => el.classList.remove('open'));
+            }
+        });
+    </script>
+</body>
+</html>
+

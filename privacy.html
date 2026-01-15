@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wolf Stone Production - Gizlilik Politikası" data-i18n="legal.privacy.title">
+    <title data-i18n-title="legal.privacy.title">Gizlilik Politikası - Wolf Stone Production</title>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background-color: #0B0B0B;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-section h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2DA8FF;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .content {
+            padding: 60px 20px;
+        }
+
+        .content h1 {
+            color: #2DA8FF;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .content .date {
+            color: #CCCCCC;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+
+        .content h2 {
+            color: #2DA8FF;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .content p {
+            color: #CCCCCC;
+            margin-bottom: 15px;
+        }
+
+        .content ul {
+            color: #CCCCCC;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .content a {
+            color: #2DA8FF;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0B0B0B;
+            border-top: 1px solid #1a1a1a;
+            padding: 30px 20px;
+            text-align: center;
+            color: #CCCCCC;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        footer .footer-links a {
+            color: #2DA8FF;
+            text-decoration: none;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-info {
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+        footer a {
+            color: #2DA8FF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                gap: 15px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo-section">
+                <img src="assets/logo.svg" alt="Wolf Stone Production Logo">
+                <h1 data-i18n="brand.name">Wolf Stone Production</h1>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">Hakkımızda</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Hizmetler</a></li>
+                    <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolyo</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">İletişim</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-toggle" onclick="document.querySelector('.language-selector').classList.toggle('open')">
+                        <span class="lang-icon">🌐</span>
+                        <span class="lang-code">EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option" data-lang="tr" onclick="I18n.setLanguage('tr'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.tr">Türkçe</button>
+                        <button class="lang-option" data-lang="en" onclick="I18n.setLanguage('en'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.en">English</button>
+                        <button class="lang-option" data-lang="ru" onclick="I18n.setLanguage('ru'); document.querySelector('.language-selector').classList.remove('open');" data-i18n="lang.ru">Русский</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="container">
+            <h1 data-i18n="legal.privacy.title">Gizlilik Politikası</h1>
+            <p class="date" data-i18n="legal.privacy.lastUpdated">Son güncelleme: 11.01.2026</p>
+
+            <p data-i18n="legal.privacy.intro">Wolf Stone Production olarak, gizliliğinize saygı gösteriyoruz. Bu politika, web sitemiz ve hizmetlerimiz aracılığıyla topladığımız bilgiler ve bu bilgileri nasıl kullandığımız hakkında bilgi verir.</p>
+
+            <h2 data-i18n="legal.privacy.dataCollection.title">1. Toplanan Veriler</h2>
+            <p data-i18n="legal.privacy.dataCollection.description">Aşağıdaki verileri toplayabiliriz:</p>
+            <ul>
+                <li data-i18n="legal.privacy.dataCollection.contact">(i) İletişim formu aracılığıyla: kullanıcı adı, e-posta adresi ve mesaj içeriği</li>
+                <li data-i18n="legal.privacy.dataCollection.cookies">(ii) Anonim analiz çerezleri: web sitesi kullanım istatistikleri (kullanılıyorsa)</li>
+                <li data-i18n="legal.privacy.dataCollection.logs">(iii) Sunucu logları: IP adresi, cihaz bilgileri, tarayıcı türü - yalnızca güvenlik ve performans amaçlı</li>
+            </ul>
+
+            <h2 data-i18n="legal.privacy.dataNotCollected.title">2. Toplamadığımız Veriler</h2>
+            <p data-i18n="legal.privacy.dataNotCollected.description">Hassas kişisel veriler toplamayız. Verilerinizi üçüncü taraflara satmayız veya ticari amaçlarla paylaşmayız.</p>
+
+            <h2 data-i18n="legal.privacy.thirdParties.title">3. Üçüncü Taraflar</h2>
+            <p data-i18n="legal.privacy.thirdParties.description">Hizmetlerimizi sunmak için aşağıdaki üçüncü taraf servisleri kullanabiliriz:</p>
+            <ul>
+                <li data-i18n="legal.privacy.thirdParties.hosting">Barındırma (hosting) sağlayıcıları</li>
+                <li data-i18n="legal.privacy.thirdParties.analytics">Analitik servisleri (varsa)</li>
+                <li data-i18n="legal.privacy.thirdParties.email">E-posta sağlayıcıları</li>
+            </ul>
+            <p data-i18n="legal.privacy.thirdParties.note">Bu servisler kendi gizlilik politikalarına tabidir.</p>
+
+            <h2 data-i18n="legal.privacy.cookies.title">4. Çerezler</h2>
+            <p data-i18n="legal.privacy.cookies.description">Web sitemiz çerezler kullanabilir. Çerezleri tarayıcı ayarlarınızdan yönetebilir veya kapatabilirsiniz. Çerezleri kapatmanız bazı özelliklerin çalışmamasına neden olabilir.</p>
+
+            <h2 data-i18n="legal.privacy.dataRetention.title">5. Veri Saklama</h2>
+            <p data-i18n="legal.privacy.dataRetention.description">İletişim mesajları, iş ilişkisi için makul süre saklanabilir. Talep halinde verilerinizi silebiliriz.</p>
+
+            <h2 data-i18n="legal.privacy.userRights.title">6. Kullanıcı Hakları</h2>
+            <p data-i18n="legal.privacy.userRights.description">Verilerinize erişim, silme veya düzeltme talebinde bulunabilirsiniz. Taleplerinizi e-posta ile iletebilirsiniz.</p>
+
+            <h2 data-i18n="legal.privacy.children.title">7. Çocukların Gizliliği</h2>
+            <p data-i18n="legal.privacy.children.description">Hizmetlerimiz 13 yaş altı çocuklar için tasarlanmamıştır. Bilerek 13 yaş altı çocuklardan kişisel bilgi toplamıyoruz.</p>
+
+            <h2 data-i18n="legal.privacy.international.title">8. Uluslararası Veri Aktarımı</h2>
+            <p data-i18n="legal.privacy.international.description">Hizmet sağlayıcılarımız farklı ülkelerde bulunabilir. Verileriniz bu ülkelere aktarılabilir.</p>
+
+            <h2 data-i18n="legal.privacy.changes.title">9. Değişiklikler</h2>
+            <p data-i18n="legal.privacy.changes.description">Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişikliklerde bu sayfada bildirim yapılacaktır.</p>
+
+            <h2 data-i18n="legal.privacy.contact.title">10. İletişim</h2>
+            <p data-i18n="legal.privacy.contact.description">Gizlilik politikamız hakkında sorularınız için:</p>
+            <p><a href="mailto:wolfstoneproduction@gmail.com" data-i18n="legal.privacy.contact.email">wolfstoneproduction@gmail.com</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                <a href="terms.html" data-i18n="footer.terms">Kullanım Şartları</a>
+                <a href="contact.html" data-i18n="nav.contact">İletişim</a>
+                <a href="mailto:wolfstoneproduction@gmail.com">wolfstoneproduction@gmail.com</a>
+            </div>
+            <div class="footer-info">
+                <p><span data-i18n="footer.copyright">© Wolf Stone Production</span></p>
+                <p><span data-i18n="footer.lastUpdated">Son güncelleme:</span> 11.01.2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        I18n.init().then(() => {
+            const langCode = I18n.currentLang.toUpperCase();
+            document.querySelector('.lang-code').textContent = langCode;
+        });
+        
+        const originalSetLanguage = I18n.setLanguage;
+        I18n.setLanguage = async function(lang) {
+            await originalSetLanguage.call(this, lang);
+            document.querySelector('.lang-code').textContent = lang.toUpperCase();
+        };
+        
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.language-selector')) {
+                document.querySelectorAll('.language-selector').forEach(el => el.classList.remove('open'));
+            }
+        });
+    </script>
+</body>
+</html>
