@@ -32,11 +32,13 @@ git push -u origin main
 
 ### 2. Vercel'de Root Directory Ayarlarını Kontrol Edin
 
+**ÖNEMLİ**: `rootDirectory` ayarı `vercel.json` dosyasında DEĞİL, Vercel Dashboard'da yapılmalıdır.
+
 1. Vercel Dashboard'a gidin: https://vercel.com
 2. Projenizi seçin
 3. **Settings** sekmesine gidin
 4. **General** bölümünde **Root Directory** ayarını kontrol edin
-5. **Root Directory** boş olmalı veya `.` olmalı (proje kök dizini)
+5. **Root Directory** boş bırakılmalı (proje kök dizini)
 6. **Build and Output Settings** bölümünde:
    - **Framework Preset**: Next.js
    - **Build Command**: `npm run build` (otomatik)
@@ -71,8 +73,8 @@ git push -u origin main
 ### Sorun 2: Vercel Yanlış Root Directory'de Arıyor
 
 **Çözüm**: 
-- Vercel Settings'te **Root Directory** boş bırakın veya `.` yapın
-- `vercel.json` dosyasında `"rootDirectory": "."` ekleyin (zaten eklendi)
+- Vercel Dashboard → Settings → General → **Root Directory** boş bırakın
+- **NOT**: `rootDirectory` ayarı `vercel.json` dosyasında DEĞİL, Vercel Dashboard'da yapılmalıdır
 
 ### Sorun 3: Dosyalar Push Edilmiş Ama Hala Hata Alıyorsunuz
 
@@ -131,7 +133,7 @@ Creating an optimized production build...
 
 ## Güncellenen Dosyalar
 
-✅ `vercel.json` - `rootDirectory: "."` eklendi
+✅ `vercel.json` - `rootDirectory` özelliği kaldırıldı (Vercel Dashboard'da ayarlanmalı)
 
-Bu, Vercel'e proje kök dizininde arama yapmasını söyler.
+**NOT**: `rootDirectory` ayarı `vercel.json` dosyasında desteklenmiyor. Bu ayar Vercel Dashboard → Settings → General bölümünden yapılmalıdır.
 
